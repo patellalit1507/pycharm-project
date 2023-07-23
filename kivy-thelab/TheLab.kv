@@ -1,0 +1,95 @@
+GridLayoutExample:
+
+
+<WidgetLayoutE>:
+   cols:3
+   size_hint:1,1
+   anchor_x:"center"
+   anchor_y:"center"
+   ToggleButton:
+      text:"toggle"
+      on_state:root.on_click_toggle(self)
+   Button:
+      text:"click here"
+      on_press:root.on_Button_click()
+      disabled:root.count_enabled
+   Label:
+      text:root.my_text
+      font_name:"fonts/Lcd.ttf"
+      font_size:"80dp"
+      #font_color:1,0,0
+
+   Switch:
+
+   Slider:
+      min:0
+      max:100
+      value:50
+      on_value:root.on_slider_value(self)
+   BoxLayout:
+      orientation:"vertical"
+      Label:
+         text:root.slider_text
+         font_name:"fonts/Lcd.ttf"
+         font_size:"80dp"
+         #font_color:1,0,0
+      ProgressBar:
+         max:100
+         value:
+
+
+
+
+
+
+<PageLayoutEample@PageLayout>:
+   ScrollViewE
+   GridLayoutExample:
+   AnchorLayoutExample:
+
+
+<ScrollViewE>:
+   StackLayoutExample:
+      size_hint: 1,None
+      height:self.minimum_height
+
+<StackLayoutExample>:
+
+
+
+<GridLayoutExample>:
+   cols:2
+   #rows:2
+   BoxLayoutEample:
+   Button:
+      text:"A"
+   Button:
+      text:"B"
+   Button:
+      text:"C"
+   #Button:
+      #text:"D"
+
+
+<AnchorLayoutExample>:
+   anchor_x:"center"
+   anchor_y:"top"
+   spacing:"10dp"
+   BoxLayout:
+      size_hint:0.2,0.2
+      Button:
+         text:"LA"
+      Button:
+         text:"LI"
+<MainWidget>:
+   Button:
+      text:"hii"
+      size:"100dp","100dp"
+      pos:"200dp","400dp"
+      color:0,0,1,1
+
+   Label:
+      text:"hello2"
+      size:"100dp","100dp"
+      pos:"100dp","200dp"
+      color:1,0,1,1

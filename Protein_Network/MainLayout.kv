@@ -1,0 +1,55 @@
+<MainScreen>:
+   Screen:
+      name:"first"
+      MDFloatingActionButton:
+         icon: "plus"
+         elevation_normal: 12
+         pos_hint:{"center_x":0.15,"center_y":0.85}
+         on_release:root.open_file_manager()
+
+
+      MDTextField:
+         id:product_name
+         hint_text: "Product name"
+         mode: "rectangle"
+         pos_hint:{"center_x":0.5,"center_y":0.73}
+         size_hint:0.75,0.07
+      MDTextField:
+         id:product_price
+         hint_text: "Product price"
+         mode: "rectangle"
+         pos_hint:{"center_x":0.5,"center_y":0.66}
+         size_hint:0.75,0.07
+         input_filter:"int"
+      MDTextField:
+         id:product_id
+         hint_text: "Product id"
+         mode: "rectangle"
+         pos_hint:{"center_x":0.5,"center_y":0.59}
+         size_hint:0.75,0.07
+         input_filter:"int"
+      MDTextField:
+         id:product_desc
+         hint_text: "Product desc"
+         multiline:True
+         pos_hint:{"center_x":0.5,"center_y":0.33}
+         size_hint:(0.8,0.45)
+      MDRaisedButton:
+         id:upload
+         pos_hint:{"center_x":0.6,"center_y":0.09}
+         text: "upload"
+         text_color: 0, 0, 0, 1
+         on_release:root.upload()
+      MDRaisedButton:
+         id:clear
+         pos_hint:{"center_x":0.3,"center_y":0.09}
+         text: "clear"
+         text_color: 0, 0, 0, 1
+         on_release:root.clear()
+      AsyncImage:
+         id:image
+         pos_hint:{"center_x":0.55,"center_y":0.87}
+         size_hint:(0.5,0.2)
+         source:''
+
+
